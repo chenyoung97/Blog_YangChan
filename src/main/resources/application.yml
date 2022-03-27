@@ -1,20 +1,10 @@
 spring:
   thymeleaf:
-    cache: false
-    prefix:  classpath:/templates/
-    check-template-location: true
-    suffix: .html
-    encoding: utf-8
     mode: HTML
   profiles:
     active: dev
-  mvc:
-    static-path-pattern: clssspath:templates/static/**
+  messages:
+    basename: i18n/messages
 
-mybatis:
-  type-aliases-package: club.aibyte.entity
-  mapper-locations: clssspath:mapper/*.xml
-  configuration:
-    map-underscore-to-camel-case: true
-
-
+comment.avatar: /images/avatar.png
+message.avatar: /images/avatar.png

@@ -1,14 +1,21 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/myblog?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&serverTimezone=GMT%2B8
-    username: root
-    password: 123456
+    url: jdbc:mysql://localhost:3306/blog_practice?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&serverTimezone=GMT%2B8
+    username: chenyang
+    password: 970405
 
 logging:
   level:
     root: info
-    com.star: debug
+    club.aibyte: debug
   file:
-    name: log/log-dev.log
+    name: log/blog-dev.log
+
+#mybatis:
+#  type-aliases-package: club.aibyte.entity
+#  mapper-locations: classpath:mapper/*.xml
+#  configuration:
+#    map-underscore-to-camel-case: true
+
 
