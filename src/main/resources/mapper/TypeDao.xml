@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="club.aibyte.dao.TypeDao">
+
+    <insert id="saveType" parameterType="club.aibyte.entity.Type">
+        insert into myblog.t_type
+        values (#{id}, #{name});
+
+    </insert>
+
+    <select id="getType" resultType="club.aibyte.entity.Type">
+        select id, name
+        from myblog.t_type
+        where id = #{identity};
+
+    </select>
+
+    <select id="getAllType" resultType="club.aibyte.entity.Type">
+        select * myblog.t_type;
+
+    </select>
+
+    <select id="getTypeByName" resultType="club.aibyte.entity.Type">
+        select *
+        from myblog.t_type
+        where name = #{name};
+
+    </select>
+
+    <update id="updateType" parameterType="club.aibyte.entity.Type">
+        update myblog.t_type
+        set name = #{name}
+        where id = #{id};
+
+    </update>
+
+    <delete id="deleteType">
+        delete
+        from myblog.t_type
+        where id = #{id};
+
+    </delete>
+
+</mapper>

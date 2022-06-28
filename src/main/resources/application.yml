@@ -5,6 +5,12 @@ spring:
     active: dev
   messages:
     basename: i18n/messages
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+  resources:
+    static-locations: classpath:/static/,classpath:/templates/
 
 comment.avatar: /images/avatar.png
 message.avatar: /images/avatar.png
